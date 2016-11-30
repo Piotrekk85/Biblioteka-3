@@ -12,19 +12,21 @@ namespace Zajecia7
         public Autor autor;
 
 
-        public Ksiazka() { }
-        public Ksiazka(string tytul, int id, string wydawnictwo, int rokWydania, int liczbaStron)
+        public Ksiazka() 
         {
-            this.tytul = tytul;
-            this.id = id;
-            this.wydawnictwo = wydawnictwo;
-            this.rokWydania = rokWydania;
-            this.liczbaStron = liczbaStron;
-            //this.autor = os;
+            autor = new Autor(); //wypada stworzyć obiekt na pole autor
         }
-        override public void WypiszInfo()
+
+        public Ksiazka(string imie, string nazwisko,string tytul, int id, string wydawnictwo, int rokWydania,int liczbaStron)
+            :base(tytul,id,wydawnictwo,rokWydania) //brakuje imienie i nazwiska
         {
-            Console.WriteLine("Ksiazka o tytule i id: {0} | {1}\nWydawnictwo: {2}\nRok wydania: {3}\nLiczba stron: {4}\n", tytul , id, wydawnictwo, rokWydania, liczbaStron);
+            this.liczbaStron = liczbaStron;
+            autor = new Autor(imie,nazwisko); //tworzenie obiektu na dane autora
+        }
+
+        public override void WypiszInfo() //estetyka, najpierw modyfikator
+        {
+            Console.WriteLine("Ksiazka o tytule i id: {0} | {1}\nWydawnictwo: {2}\nRok wydania: {3}\nLiczba stron: {4}\n Autor: {5}\n", tytul, id, wydawnictwo, rokWydania, liczbaStron, autor.PobierzAutora());
         }
 
 

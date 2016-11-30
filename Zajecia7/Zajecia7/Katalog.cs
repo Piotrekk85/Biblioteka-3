@@ -12,27 +12,60 @@ namespace Zajecia7
         public List<Pozycja> listaPozycji;
         public string tytul;
 
-        public Katalog() { }
+        public Katalog()
+        {
+            listaPozycji = new List<Pozycja>();//warto stworzyc liste
+        }
+
         public Katalog(string dzialTematyczny)
         {
             this.dzialTematyczny = dzialTematyczny;
+            listaPozycji = new List<Pozycja>();//warto stworzyc liste
         }
-        public void DodajPozycje(string pozycja)
+        public void DodajPozycje(Pozycja pozycja)
         {
-        //?????
+            listaPozycji.Add(pozycja);
         }
-        public void WyszukajPoTytule()
+
+        //metoda na dodanie ksiązki z parametrami
+        public void DodajPozycje(string imie, string nazwisko, string tytul, int id, string wydawnictwo, int rokWydania, int liczbaStron)
         {
-            Console.WriteLine("Podaj tytul do wyszukania: ");
-           
+            listaPozycji.Add(new Ksiazka(imie,nazwisko,tytul,id,wydawnictwo,rokWydania,liczbaStron));
         }
-        public void WyszukajPoId() 
+
+        //metoda na dodanie czasopisma z parametrami
+        public void DodajPozycje(string tytuł, int id, string wydawnictwo, int rokWydania,int numer)
         {
-            Console.WriteLine("Podaj id do wyszukania: ");
+            listaPozycji.Add(new Czasopismo(tytuł, id, wydawnictwo, rokWydania,numer));
         }
+
+        //metoda wyszukiwania po tytule (teoretycznie możemy otrzymac kilka rzeczy więc wracamy listę)
+        public void WyszukajPoTytule(string tytuł)
+        {
+            List<Pozycja> wysz = listaPozycji.FindAll(x => x.PobierzTytuł() == tytuł);
+            foreach (var element in wysz)
+            {
+                element.WypiszInfo();
+                for (int i = 0; i < 55; i++) Console.Write("*");
+                Console.WriteLine("*");
+            }
+        }
+
+        //metoda wyszukiwania po id, tu wynik mamy jeden po id zwykle jest unikalne
+        public void WyszukajPoId(int id)
+        {
+            Pozycja wyszuk = listaPozycji.Find(x => x.PobierzId() == id);
+            wyszuk.WypiszInfo();
+        }
+
         public void WypiszWszystko()
         {
-            Console.WriteLine("Wypisz wszystko: ");
+            foreach (var element in listaPozycji)
+            {
+                element.WypiszInfo();
+                for (int i = 0; i < 55; i++) Console.Write("*");
+                Console.WriteLine("*");
+            }
         }
 
 

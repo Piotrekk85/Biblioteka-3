@@ -11,11 +11,22 @@ namespace Zajecia7
         private string narodowosc;
 
         public Autor(){ }
-        public Autor(string imie, string nazwisko,string narodowosc)
+        public Autor(string imie, string nazwisko, string narodowosc)
+            : base(imie, nazwisko) //tu mozna skrocic
         {
-            this.imie = imie;
-            this.nazwisko = nazwisko;
             this.narodowosc = narodowosc;
+        }
+
+        //konstruktor z 2 parametrami (bez narodowosci) 
+        public Autor(string imie, string nazwisko)
+            : base(imie, nazwisko)
+        {
+            narodowosc = "Polska";
+        }
+
+        public string PobierzAutora()
+        {
+            return imie + " " + nazwisko;
         }
 
 

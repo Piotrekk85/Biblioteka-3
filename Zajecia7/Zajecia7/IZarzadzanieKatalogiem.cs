@@ -8,8 +8,9 @@ namespace Zajecia7
 {
     interface IZarzadzanieKatalogiem
     {
-        void WyszukajPoTytule();
-        void WyszukajPoId();
+        //brak parametrów w dwóch pierwszy metodach
+        void WyszukajPoTytule(string tytuł);
+        void WyszukajPoId(int id);
         void WypiszWszystko();
     }
 }

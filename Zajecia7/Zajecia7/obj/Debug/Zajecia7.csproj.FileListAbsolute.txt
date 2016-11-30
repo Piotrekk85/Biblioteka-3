@@ -4,3 +4,9 @@ D:\ML-PO\Zajecia7\Zajecia7\bin\Debug\Zajecia7.exe
 D:\ML-PO\Zajecia7\Zajecia7\bin\Debug\Zajecia7.pdb
 D:\ML-PO\Zajecia7\Zajecia7\obj\Debug\Zajecia7.exe
 D:\ML-PO\Zajecia7\Zajecia7\obj\Debug\Zajecia7.pdb
+C:\Users\Piotrek\Desktop\Cw7\9\Biblioteka-master\Zajecia7\Zajecia7\bin\Debug\Zajecia7.exe.config
+C:\Users\Piotrek\Desktop\Cw7\9\Biblioteka-master\Zajecia7\Zajecia7\obj\Debug\Zajecia7.exe
+C:\Users\Piotrek\Desktop\Cw7\9\Biblioteka-master\Zajecia7\Zajecia7\obj\Debug\Zajecia7.pdb
+C:\Users\Piotrek\Desktop\Cw7\9\Biblioteka-master\Zajecia7\Zajecia7\bin\Debug\Zajecia7.exe
+C:\Users\Piotrek\Desktop\Cw7\9\Biblioteka-master\Zajecia7\Zajecia7\bin\Debug\Zajecia7.pdb
+C:\Users\Piotrek\Desktop\Cw7\9\Biblioteka-master\Zajecia7\Zajecia7\obj\Debug\Zajecia7.csprojResolveAssemblyReference.cache
